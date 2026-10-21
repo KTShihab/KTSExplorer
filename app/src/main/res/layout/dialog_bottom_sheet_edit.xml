@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingBottom="24dp">
+
+    <!-- Bottom Sheet Title (Accessibility Heading) -->
+    <TextView
+        android:id="@+id/tv_edit_sheet_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="12dp"
+        android:accessibilityHeading="true"
+        android:ellipsize="middle"
+        android:singleLine="true"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="Edit: sample.mp3" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:importantForAccessibility="no" />
+
+    <!-- Convert Action -->
+    <LinearLayout
+        android:id="@+id/action_submenu_convert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="52dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_action_convert" />
+
+        <TextView
+            android:id="@+id/tv_submenu_convert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/action_convert"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="16sp"
+            android:importantForAccessibility="no" />
+
+    </LinearLayout>
+
+    <!-- Split Action -->
+    <LinearLayout
+        android:id="@+id/action_submenu_split"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="52dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_action_split" />
+
+        <TextView
+            android:id="@+id/tv_submenu_split"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/action_split"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="16sp"
+            android:importantForAccessibility="no" />
+
+    </LinearLayout>
+
+    <!-- Trim Action -->
+    <LinearLayout
+        android:id="@+id/action_submenu_trim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="52dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_action_trim" />
+
+        <TextView
+            android:id="@+id/tv_submenu_trim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/action_trim"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="16sp"
+            android:importantForAccessibility="no" />
+
+    </LinearLayout>
+
+</LinearLayout>

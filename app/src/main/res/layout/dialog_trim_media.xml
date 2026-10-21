@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ================= START MARK SECTION ================= -->
+        <TextView
+            android:id="@+id/tv_header_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_start_time"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:accessibilityHeading="true"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Start Column Labels -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="2dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/label_hours"
+                android:textSize="12sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:labelFor="@+id/et_start_hh" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="0dp"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/label_minutes"
+                android:textSize="12sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:labelFor="@+id/et_start_mm" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="0dp"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/label_seconds"
+                android:textSize="12sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:labelFor="@+id/et_start_ss" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="0dp"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1.3"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/label_millis"
+                android:textSize="12sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:labelFor="@+id/et_start_ms" />
+
+        </LinearLayout>
+
+        <!-- Start Time Input Row (HH : MM : SS . mmm) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/et_start_hh"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:hint="00"
+                android:contentDescription="@string/desc_start_hours" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:importantForAccessibility="no" />
+
+            <EditText
+                android:id="@+id/et_start_mm"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:hint="00"
+                android:contentDescription="@string/desc_start_minutes" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:importantForAccessibility="no" />
+
+            <EditText
+                android:id="@+id/et_start_ss"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:hint="00"
+                android:contentDescription="@string/desc_start_seconds" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="."
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:importantForAccessibility="no" />
+
+            <EditText
+                android:id="@+id/et_start_ms"
+                android:layout_width="0dp"
+                android:layout_weight="1.3"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="3"
+                android:hint="000"
+                android:contentDescription="@string/desc_start_millis" />
+
+        </LinearLayout>
+
+        <!-- Start Time Step and Buttons Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+
+            <Button
+                android:id="@+id/btn_start_decrease"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:contentDescription="@string/btn_decrease_time"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+            <Button
+                android:id="@+id/btn_start_step"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:textSize="12sp"
+                android:text="Step: 1s"
+                style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+            <Button
+                android:id="@+id/btn_start_increase"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:contentDescription="@string/btn_increase_time"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        </LinearLayout>
+
+        <!-- Play Start Mark Preview Button -->
+        <Button
+            android:id="@+id/btn_play_start"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/btn_play_start"
+            android:contentDescription="@string/desc_play_start"
+            app:icon="@drawable/ic_action_play"
+            app:iconGravity="textStart"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <!-- ================= END MARK SECTION ================= -->
+        <TextView
+            android:id="@+id/tv_header_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_end_time"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:accessibilityHeading="true"
+            android:layout_marginBottom="4dp" />
+
+        <!-- End Column Labels -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="2dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/label_hours"
+                android:textSize="12sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:labelFor="@+id/et_end_hh" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="0dp"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/label_minutes"
+                android:textSize="12sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:labelFor="@+id/et_end_mm" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="0dp"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/label_seconds"
+                android:textSize="12sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:labelFor="@+id/et_end_ss" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="0dp"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1.3"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/label_millis"
+                android:textSize="12sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:labelFor="@+id/et_end_ms" />
+
+        </LinearLayout>
+
+        <!-- End Time Input Row (HH : MM : SS . mmm) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/et_end_hh"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:hint="00"
+                android:contentDescription="@string/desc_end_hours" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:importantForAccessibility="no" />
+
+            <EditText
+                android:id="@+id/et_end_mm"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:hint="00"
+                android:contentDescription="@string/desc_end_minutes" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:importantForAccessibility="no" />
+
+            <EditText
+                android:id="@+id/et_end_ss"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:hint="00"
+                android:contentDescription="@string/desc_end_seconds" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="."
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:importantForAccessibility="no" />
+
+            <EditText
+                android:id="@+id/et_end_ms"
+                android:layout_width="0dp"
+                android:layout_weight="1.3"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="3"
+                android:hint="000"
+                android:contentDescription="@string/desc_end_millis" />
+
+        </LinearLayout>
+
+        <!-- End Time Step and Buttons Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+
+            <Button
+                android:id="@+id/btn_end_decrease"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:contentDescription="@string/btn_decrease_time"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+            <Button
+                android:id="@+id/btn_end_step"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:textSize="12sp"
+                android:text="Step: 1s"
+                style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+            <Button
+                android:id="@+id/btn_end_increase"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:contentDescription="@string/btn_increase_time"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        </LinearLayout>
+
+        <!-- Play End Mark Preview Button -->
+        <Button
+            android:id="@+id/btn_play_end"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/btn_play_end"
+            android:contentDescription="@string/desc_play_end"
+            app:icon="@drawable/ic_action_play"
+            app:iconGravity="textStart"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="?android:attr/listDivider" />
+
+        <!-- Header: Preview Selection -->
+        <TextView
+            android:id="@+id/tv_header_selection_preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_selection_preview"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:accessibilityHeading="true"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Selection Preview Controls: Rewind, Play/Pause, Fast-Forward -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <!-- Rewind Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_preview_rewind"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:text="@string/btn_rewind_10s"
+                android:contentDescription="@string/desc_preview_rewind"
+                app:icon="@drawable/ic_fast_rewind"
+                app:iconGravity="textStart"
+                android:textSize="11sp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+            <!-- Play / Pause Selection Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_play_selection"
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_height="48dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:text="@string/btn_play_selection"
+                android:contentDescription="@string/desc_play_selection"
+                app:icon="@drawable/ic_action_play"
+                app:iconGravity="textStart"
+                android:textSize="12sp"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                style="@style/Widget.MaterialComponents.Button" />
+
+            <!-- Fast-Forward Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_preview_forward"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:text="@string/btn_forward_10s"
+                android:contentDescription="@string/desc_preview_forward"
+                app:icon="@drawable/ic_fast_forward"
+                app:iconGravity="textStart"
+                android:textSize="11sp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

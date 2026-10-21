@@ -1,0 +1,554 @@
+<resources>
+    <string name="app_name">KTS File Explorer</string>
+
+    <!-- Bottom Navigation Bar Tabs -->
+    <string name="nav_home">Home</string>
+    <string name="nav_home_desc">Home tab, browse local device files and folders</string>
+    <string name="nav_category">Category</string>
+    <string name="nav_category_desc">Category tab, view files organized by categories</string>
+    <string name="nav_online">Online</string>
+    <string name="nav_online_desc">Online tab, cloud and network storage</string>
+    <string name="nav_favorite">Favorite</string>
+    <string name="nav_favorite_desc">Favorite tab, bookmarked and starred items</string>
+
+    <!-- Header and Navigation -->
+    <string name="storage_title">Internal Storage</string>
+    <string name="title_select_storage">Select Storage</string>
+    <string name="storage_switch_success">Switched to %1$s</string>
+    <string name="storage_no_external">No external storage (SD card) detected</string>
+    <string name="storage_selector_root_desc">%1$s. %2$s used, %3$s free. Double tap to switch storage.</string>
+    <string name="storage_selector_folder_desc">%1$s, %2$s. %3$s used, %4$s free. Double tap to switch storage.</string>
+    <string name="drawer_create_new">Create New Folder</string>
+    <string name="btn_up_folder">Navigate up to parent folder</string>
+    <string name="btn_sort">Sort files and folders</string>
+    <string name="btn_search">Search files and folders</string>
+    <string name="search_hint">Search files and folders&#8230;</string>
+    <string name="btn_close_search">Close search</string>
+    <string name="btn_clear_search">Clear search text</string>
+    <string name="current_path_label">Current folder: %1$s</string>
+    <string name="files_recycler_label">Files and folders list</string>
+
+    <!-- Status & Feedback for Screen Readers -->
+    <string name="folder_empty">This folder is empty</string>
+    <string name="loading_files">Loading files, please wait</string>
+    <string name="folder_loaded_announcement">%1$s opened, %2$d items found</string>
+    <string name="navigated_up_announcement">Navigated up to %1$s</string>
+    <string name="item_count">%1$d items</string>
+    <string name="item_count_single">1 item</string>
+    <string name="cannot_open_file">No application found to open this file</string>
+
+    <!-- Search Live Feedback -->
+    <string name="search_opened_announcement">Search opened. Type to filter files.</string>
+    <string name="search_results_count">%1$d items found for %2$s</string>
+    <string name="search_no_results">No items found matching %1$s</string>
+    <string name="search_closed">Search closed</string>
+
+    <!-- Storage Permission Screen -->
+    <string name="permission_title">Storage Permission Required</string>
+    <string name="permission_message">KTS File Explorer requires file management permission to browse, display, and manage your device storage folders and files.</string>
+    <string name="btn_grant_permission">Grant Storage Permission</string>
+    <string name="permission_rationale_announcement">Storage access permission is needed to display files. Please tap Grant Storage Permission.</string>
+    <string name="permission_denied_message">Storage permission was not granted. Please allow storage access in Settings to view files.</string>
+
+    <!-- File Item Screen Reader Format -->
+    <string name="folder_item_desc">Folder, %1$s, %2$s, Modified %3$s.</string>
+    <string name="file_item_desc">File, %1$s, %2$s, Modified %3$s.</string>
+
+    <!-- Sorting Dialog Strings -->
+    <string name="sort_dialog_title">Sort by</string>
+    <string name="sort_name_asc">Name (A to Z)</string>
+    <string name="sort_name_desc">Name (Z to A)</string>
+    <string name="sort_size_asc">Size (Smallest to Largest)</string>
+    <string name="sort_size_desc">Size (Largest to Smallest)</string>
+    <string name="sort_date_desc">Date Modified (Newest first)</string>
+    <string name="sort_date_asc">Date Modified (Oldest first)</string>
+    <string name="sort_type_asc">File Type/Extension (A to Z)</string>
+    <string name="sort_type_desc">File Type/Extension (Z to A)</string>
+    <string name="sort_user_apps_first">User Applications First</string>
+    <string name="sort_system_apps_first">System Applications First</string>
+    <string name="sorted_by_announcement">Files sorted by %1$s</string>
+
+    <!-- Custom Action Menu Strings -->
+    <string name="action_menu_title">Actions for %1$s</string>
+    <string name="action_select">Select</string>
+    <string name="action_add_favorite">Add to Favorite</string>
+    <string name="action_remove_favorite">Remove from Favorite</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_cut">Cut</string>
+    <string name="action_rename">Rename</string>
+    <string name="action_open_with">Open with</string>
+    <string name="action_share">Share</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_properties">Properties</string>
+    <string name="action_paste">Paste</string>
+    <string name="action_paste_desc">Paste %1$s to current folder</string>
+    <string name="btn_cancel_clipboard">Cancel clipboard</string>
+
+    <!-- Properties Dialog Strings -->
+    <string name="properties_dialog_title">Properties</string>
+    <string name="prop_name">Name</string>
+    <string name="prop_type">Type</string>
+    <string name="prop_location">Location</string>
+    <string name="prop_size">Size</string>
+    <string name="prop_contains">Contains</string>
+    <string name="prop_modified">Last modified</string>
+    <string name="prop_permissions">Permissions</string>
+    <string name="prop_calculating">Calculating&#8230;</string>
+    <string name="prop_contains_format">%1$d files, %2$d folders</string>
+    <string name="prop_permissions_format">Read: %1$s, Write: %2$s, Hidden: %3$s</string>
+    <string name="prop_type_folder">Folder</string>
+    <string name="prop_type_file">%1$s file (%2$s)</string>
+    <string name="btn_close">Close</string>
+
+    <!-- Action Execution Feedback & Dialogs -->
+    <string name="toast_copied">"%1$s" copied. Paste button available at the bottom right.</string>
+    <string name="toast_cut">"%1$s" cut. Paste button available at the bottom right.</string>
+    <string name="toast_copied_multiple">%1$d items copied. Paste button available at the bottom right.</string>
+    <string name="toast_cut_multiple">%1$d items cut. Paste button available at the bottom right.</string>
+    <string name="toast_pasted">"%1$s" pasted successfully</string>
+    <string name="toast_pasted_multiple">%1$d items pasted successfully</string>
+    <string name="toast_paste_failed">Failed to paste items</string>
+    <string name="cannot_paste_inside_itself">Cannot paste a folder inside itself</string>
+    <string name="clipboard_cancelled">Clipboard cleared</string>
+
+    <!-- Favorite Actions & Screen -->
+    <string name="toast_added_favorite">Added "%1$s" to Favorites</string>
+    <string name="toast_removed_favorite">Removed "%1$s" from Favorites</string>
+    <string name="toast_favorite_multiple">Added %1$d items to Favorites</string>
+    <string name="favorites_title">Favorite Files and Folders</string>
+    <string name="no_favorites_yet">No favorite items yet. Use the actions menu to star any file or folder.</string>
+
+    <!-- Selection Mode & Range Selection Strings -->
+    <string name="selection_mode_title">%1$d selected</string>
+    <string name="btn_exit_selection">Exit selection mode</string>
+    <string name="btn_select_all">Select all items</string>
+    <string name="btn_copy_selected">Copy selected items</string>
+    <string name="btn_cut_selected">Cut selected items</string>
+    <string name="btn_favorite_selected">Add selected items to favorites</string>
+    <string name="item_selected_announcement">%1$s selected, %2$d items selected</string>
+    <string name="item_unselected_announcement">%1$s unselected, %2$d items selected</string>
+    <string name="range_selected_announcement">Selected %1$d items from %2$s to %3$s. Total %4$d items selected.</string>
+    <string name="selected_state_prefix">Selected. %1$s. Double-tap to deselect, double-tap and hold to select range.</string>
+    <string name="not_selected_state_prefix">Not selected. %1$s. Double-tap to select, double-tap and hold to select range.</string>
+    <string name="delete_selected_confirmation">Are you sure you want to permanently delete %1$d selected items?</string>
+    <string name="toast_delete_multiple_success">%1$d items deleted</string>
+
+    <!-- ZIP Folder Sharing Feedback -->
+    <string name="zipping_folder_progress">Compressing "%1$s" into ZIP archive, please wait&#8230;</string>
+    <string name="folder_zipped_success">"%1$s" compressed into ZIP archive</string>
+    <string name="folder_zip_failed">Failed to compress "%1$s"</string>
+
+    <string name="dialog_rename_title">Rename</string>
+    <string name="dialog_rename_hint">Enter new name</string>
+    <string name="btn_rename">Rename</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="toast_rename_success">Renamed to "%1$s"</string>
+    <string name="toast_rename_failed">Failed to rename "%1$s"</string>
+    <string name="toast_name_empty">Name cannot be empty</string>
+    <string name="dialog_delete_title">Delete item</string>
+    <string name="dialog_delete_message">Are you sure you want to permanently delete "%1$s"?</string>
+    <string name="btn_delete">Delete</string>
+    <string name="toast_delete_success">"%1$s" deleted</string>
+    <string name="toast_delete_failed">Failed to delete "%1$s"</string>
+
+    <!-- Categories Screen Strings -->
+    <string name="category_list_label">File categories list</string>
+    <string name="btn_back_to_categories">Back to categories list</string>
+    <string name="category_new_files">New Files</string>
+    <string name="category_new_files_sub">Recently added files and folders</string>
+    <string name="category_audio">Audio</string>
+    <string name="category_audio_sub">Music, audio recordings, and podcasts</string>
+    <string name="category_images">Images</string>
+    <string name="category_images_sub">Photos, wallpapers, and screenshots</string>
+    <string name="category_videos">Videos</string>
+    <string name="category_videos_sub">Movies, clips, and video recordings</string>
+    <string name="category_documents">Documents</string>
+    <string name="category_documents_sub">PDF, Word, Excel, PowerPoint, and Text</string>
+    <string name="category_downloads">Downloads</string>
+    <string name="category_downloads_sub">Files saved from internet and apps</string>
+    <string name="category_apps">Apps (APKs)</string>
+    <string name="category_apps_sub">Android application package files</string>
+    <string name="category_card_desc">%1$s category, %2$s. Double tap to view %1$s folders and files.</string>
+    <string name="category_card_desc_with_size">%1$s category, %2$s, %3$s. Double tap to view %1$s folders and files.</string>
+    <string name="category_no_files">No files or folders found in this category</string>
+    <string name="category_opened_announcement">%1$s category opened, %2$d folders and files found</string>
+
+    <!-- Network & PC Sharing Strings -->
+    <string name="online_tab_title">Network &amp; PC Sharing</string>
+    <string name="title_pc_access">Access Phone from Computer</string>
+    <string name="desc_pc_access">Browse and manage phone files directly on your computer over Wi-Fi</string>
+    <string name="btn_start_server">Start Wireless Server</string>
+    <string name="btn_stop_server">Stop Server</string>
+    <string name="server_running">Wireless server active on your Wi-Fi network</string>
+    <string name="server_stopped">Server is currently stopped</string>
+    <string name="label_browser_url">%1$s</string>
+    <string name="label_explorer_url">%1$s</string>
+    <string name="label_explorer_title">Windows File Explorer (FTP)</string>
+    <string name="label_browser_title">Web Browser (Chrome / Edge / Firefox)</string>
+    <string name="btn_copy_ftp">Copy FTP Address</string>
+    <string name="btn_copy_ip">Copy IP</string>
+    <string name="btn_copy_browser">Copy Browser Address</string>
+    <string name="toast_address_copied">%1$s copied</string>
+    <string name="login_required_title">Computer Login Required</string>
+    <string name="login_required_desc">This computer (%1$s) requires credentials to access folders.</string>
+    <string name="btn_login_connect">Login &amp; Connect</string>
+    <string name="heading_computers">Computers &amp; Shared Folders</string>
+    <string name="btn_scan_network">Scan Wi-Fi</string>
+    <string name="btn_add_computer">Add Computer</string>
+    <string name="empty_computers">No computers added yet. Tap \'Scan Wi-Fi\' to find computers, or tap \'Add Computer\' to connect manually.</string>
+    <string name="dialog_add_computer_title">Add Computer / Network Share</string>
+    <string name="hint_server_name">Computer Name (e.g. My Laptop)</string>
+    <string name="hint_server_host">Computer IP / Hostname (e.g. 192.168.1.5)</string>
+    <string name="hint_server_port">Port (445 for SMB, 21 for FTP)</string>
+    <string name="hint_server_user">Username (Windows user, optional)</string>
+    <string name="hint_server_pass">Password (optional)</string>
+    <string name="hint_server_domain">Domain / Workgroup (Default: WORKGROUP)</string>
+    <string name="hint_server_share">Share Name (optional, e.g. Users, Shared)</string>
+    <string name="server_type_smb">SMB (Windows / Mac Shared Folders)</string>
+    <string name="server_type_ftp">FTP Server</string>
+    <string name="btn_save_connect">Save &amp; Connect</string>
+    <string name="scanning_network">Scanning local Wi-Fi network for computers&#8230;</string>
+    <string name="scan_complete">Scan finished. Found %1$d computers.</string>
+    <string name="connecting_to_server">Connecting to %1$s&#8230;</string>
+    <string name="toast_downloading">Downloading "%1$s" from computer&#8230;</string>
+    <string name="toast_download_complete">Downloaded "%1$s" to Downloads</string>
+    <string name="toast_uploading">Uploading "%1$s" to computer&#8230;</string>
+    <string name="toast_upload_complete">Uploaded "%1$s" to computer</string>
+    <string name="toast_paste_pc_success">Pasted %1$d items to computer successfully</string>
+    <string name="toast_copy_to_phone_ready">"%1$s" copied. Go to Home tab and tap Paste.</string>
+    <string name="btn_paste_to_pc">Paste to PC</string>
+    <string name="btn_background">Background</string>
+    <string name="dialog_transfer_title">Pasting Files</string>
+    <string name="paste_cancelled">Paste cancelled</string>
+    <string name="action_download_phone">Download to Phone</string>
+    <string name="action_copy_phone">Copy to Phone Clipboard</string>
+    <string name="dialog_new_folder_pc">Create Folder on Computer</string>
+    <string name="btn_upload_from_phone">Upload File from Phone</string>
+    <string name="dialog_delete_pc_item">Are you sure you want to delete "%1$s" from computer?</string>
+
+    <!-- Cloud Storage Strings -->
+    <string name="heading_cloud_storage">Cloud Storage</string>
+    <string name="title_google_drive">Google Drive</string>
+    <string name="gdrive_not_connected">Connect Google Drive to browse and manage cloud files</string>
+    <string name="gdrive_connected">Connected: %1$s • Tap to browse</string>
+    <string name="btn_connect">Connect</string>
+    <string name="btn_open">Open</string>
+    <string name="btn_disconnect">Disconnect</string>
+    <string name="btn_add_cloud">Add Cloud</string>
+    <string name="toast_gdrive_connected">Google Drive connected successfully</string>
+    <string name="toast_gdrive_disconnected">Google Drive disconnected</string>
+    <string name="dialog_connect_cloud_title">Connect Cloud Storage</string>
+    <string name="cloud_gdrive_instruction">Select your Google Drive or cloud folder to connect</string>
+
+    <!-- Apps Category Dual Modes -->
+    <string name="tab_apk_files">APK Files</string>
+    <string name="tab_installed_apps">Installed Apps</string>
+    <string name="installed_apps_count">%1$d Installed Applications</string>
+    <string name="app_type_user">User App</string>
+    <string name="app_type_system">System App</string>
+    <string name="action_open_app">Open App</string>
+    <string name="action_app_info">App Info</string>
+    <string name="action_uninstall">Uninstall</string>
+    <string name="action_share_apk">Share APK File</string>
+    <string name="action_share_link">Share App Link</string>
+    <string name="action_extract_apk">Extract APK to Downloads</string>
+    <string name="toast_extracting_apk">Extracting "%1$s" APK to Downloads&#8230;</string>
+    <string name="toast_apk_extracted">"%1$s" APK saved to Downloads</string>
+    <string name="toast_apk_extract_failed">Failed to extract APK for "%1$s"</string>
+    <string name="cannot_uninstall_system_app">System applications cannot be uninstalled</string>
+    <string name="cannot_open_app">No launcher activity available for "%1$s"</string>
+
+    <!-- New File and Folder Creation -->
+    <string name="btn_new">New</string>
+    <string name="dialog_new_title">Create New</string>
+    <string name="new_folder">Folder</string>
+    <string name="new_file">File</string>
+    <string name="dialog_new_folder_title">Create New Folder</string>
+    <string name="dialog_new_folder_hint">Folder name</string>
+    <string name="btn_create">Create</string>
+    <string name="toast_folder_created">Folder "%1$s" created</string>
+    <string name="toast_folder_create_failed">Failed to create folder "%1$s"</string>
+    <string name="dialog_new_file_title">Create New File</string>
+    <string name="hint_file_title">File Title</string>
+    <string name="hint_file_body">Main Body Text</string>
+    <string name="label_file_category">Select Category / Format:</string>
+    <string name="format_txt">TXT (Plain Text .txt)</string>
+    <string name="format_doc">DOC (Document .doc)</string>
+    <string name="format_pdf">PDF (Document .pdf)</string>
+    <string name="format_html">HTML (Web Page .html)</string>
+    <string name="btn_save">Save</string>
+    <string name="toast_file_created">File "%1$s" created successfully</string>
+    <string name="toast_file_create_failed">Failed to create file "%1$s"</string>
+    <string name="toast_title_empty">File title cannot be empty</string>
+
+    <!-- Navigation Drawer Strings -->
+    <string name="btn_open_drawer">Open navigation drawer</string>
+    <string name="btn_close_drawer">Close navigation drawer</string>
+    <string name="drawer_opened_announcement">Navigation drawer opened</string>
+    <string name="drawer_closed_announcement">Navigation drawer closed</string>
+    <string name="drawer_header_title">KTS File Explorer</string>
+    <string name="drawer_header_subtitle">Accessible File Manager</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_about">About KTS File Explorer</string>
+
+    <!-- Settings Activity Strings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_action_menu_title">Customize Action Menu</string>
+    <string name="settings_action_menu_subtitle">Toggle items on or off, and customize the order of options using Move Up and Move Down buttons.</string>
+    <string name="btn_reset_defaults">Reset to Defaults</string>
+    <string name="dialog_reset_confirm_title">Reset Action Menu Order</string>
+    <string name="dialog_reset_confirm_message">Are you sure you want to restore the default order and enable all actions?</string>
+    <string name="toast_reset_defaults">Action menu order and items restored to defaults</string>
+    <string name="action_moved_up">%1$s moved up to position %2$d</string>
+    <string name="action_moved_down">%1$s moved down to position %2$d</string>
+    <string name="action_enabled">%1$s enabled</string>
+    <string name="action_disabled">%1$s disabled</string>
+    <string name="btn_move_up_desc">Move %1$s up, position %2$d of %3$d</string>
+    <string name="btn_move_down_desc">Move %1$s down, position %2$d of %3$d</string>
+    <string name="switch_action_desc">Show %1$s in action menu</string>
+    <string name="about_dialog_message">KTS File Explorer v1.0\nA fully accessible, high-performance Android file manager designed for TalkBack and Jieshuo screen readers.</string>
+
+    <!-- Enhanced Media & Document Properties Strings -->
+    <string name="prop_duration">Duration</string>
+    <string name="prop_bitrate">Bitrate</string>
+    <string name="prop_samplerate">Sample Rate</string>
+    <string name="prop_channels">Audio Channels</string>
+    <string name="prop_title">Title</string>
+    <string name="prop_artist">Artist</string>
+    <string name="prop_album">Album</string>
+    <string name="prop_genre">Genre</string>
+    <string name="prop_year">Year</string>
+    <string name="prop_resolution">Resolution</string>
+    <string name="prop_codec">Format / Codec</string>
+    <string name="prop_framerate">Frame Rate</string>
+    <string name="prop_camera">Camera Model</string>
+    <string name="prop_date_taken">Date Taken</string>
+    <string name="prop_focal_length">Focal Length</string>
+    <string name="prop_aperture">Aperture</string>
+    <string name="prop_iso">ISO Speed</string>
+    <string name="prop_exposure">Exposure Time</string>
+    <string name="prop_page_count">Page Count</string>
+    <string name="prop_page_count_format">%1$d pages</string>
+    <string name="prop_pdf_version">PDF Version</string>
+    <string name="prop_package_name">Package Name</string>
+    <string name="prop_version">Version</string>
+    <string name="prop_sdk">Target Android SDK</string>
+
+    <!-- Save Shared Files (WhatsApp, Telegram, etc.) -->
+    <string name="btn_save_here">Save Here</string>
+    <string name="save_shared_file_title">Save shared file: %1$s</string>
+    <string name="save_shared_files_title">Save %1$d shared files</string>
+    <string name="save_shared_destination">Destination: %1$s</string>
+    <string name="toast_save_shared_success">"%1$s" saved to %2$s</string>
+    <string name="toast_save_shared_multiple_success">%1$d files saved to %2$s</string>
+    <string name="toast_save_shared_failed">Failed to save "%1$s"</string>
+    <string name="save_shared_mode_announcement">Save mode active. Navigate to your desired folder and click Save Here.</string>
+    <string name="saving_files_progress">Saving shared file&#8230;</string>
+
+    <!-- Archive Viewer & Compression Strings -->
+    <string name="zip_opening_progress">Opening archive, extracting contents&#8230;</string>
+    <string name="zip_opened_announcement">Archive opened: %1$s, %2$d items found</string>
+    <string name="zip_open_failed">Failed to open archive: %1$s</string>
+    <string name="archive_path_prefix">Archive: %1$s</string>
+    <string name="archive_exited_announcement">Exited archive, returned to %1$s</string>
+
+    <string name="dialog_select_archive_format">Choose Compression Format</string>
+    <string name="format_archive_zip">ZIP (.zip) - Recommended, Maximum Compatibility</string>
+    <string name="format_archive_7z">7Z (.7z) - High Compression Ratio</string>
+    <string name="format_archive_targz">TAR.GZ (.tar.gz) - Gzipped Linux/Android Archive</string>
+    <string name="format_archive_tar">TAR (.tar) - Uncompressed Tape Archive</string>
+    <string name="compressing_folder_progress">Compressing "%1$s" into %2$s&#8230;</string>
+    <string name="folder_compressed_success">Compressed "%1$s" into %2$s</string>
+    <string name="folder_compress_failed">Failed to compress folder "%1$s"</string>
+
+    <!-- General & Display Settings -->
+    <string name="settings_section_general">General &amp; Storage</string>
+    <string name="settings_show_storage_info">Show Storage Information</string>
+    <string name="settings_show_storage_info_desc">Display used and free storage space on the main screen</string>
+    <string name="settings_announce_category_desc">Category Description Announcement</string>
+    <string name="settings_announce_category_desc_desc">Announce what each category is for (e.g. document types or video types)</string>
+    <string name="settings_show_usage_hints">Accessibility Usage Hints</string>
+    <string name="settings_show_usage_hints_desc">Announce "double tap to activate", "double tap and hold", "actions available", and tips</string>
+
+    <string name="category_card_desc_with_size_full">%1$s category, %2$s, %3$s</string>
+    <string name="category_card_desc_with_size_concise">%1$s category, %2$s</string>
+    <string name="category_card_desc_full">%1$s category, %2$s</string>
+    <string name="category_card_desc_concise">%1$s category</string>
+    <string name="category_hint_tap">Double tap to view %1$s folders and files.</string>
+
+    <!-- Folder Announcement Settings -->
+    <string name="settings_section_folder_info">Folder Information &amp; Announcements</string>
+    <string name="settings_folder_announce_name">Announce Folder Name</string>
+    <string name="settings_folder_announce_name_desc">Include the folder\'s name in announcements</string>
+    <string name="settings_folder_announce_count">Announce Item Count</string>
+    <string name="settings_folder_announce_count_desc">Announce the number of files and items inside the folder</string>
+    <string name="settings_folder_announce_size">Announce Folder Size</string>
+    <string name="settings_folder_announce_size_desc">Announce the size occupied by the folder or category files</string>
+    <string name="settings_folder_announce_order">Folder Announcement Order</string>
+    <string name="settings_folder_announce_order_desc">Set the sequence of folder details announced to screen readers</string>
+    <string name="dialog_select_folder_order">Select Folder Announcement Order</string>
+
+    <string name="folder_order_name_count_size">Name \u2192 Item Count \u2192 Size</string>
+    <string name="folder_order_name_size_count">Name \u2192 Size \u2192 Item Count</string>
+    <string name="folder_order_count_name_size">Item Count \u2192 Name \u2192 Size</string>
+    <string name="folder_order_count_size_name">Item Count \u2192 Size \u2192 Name</string>
+    <string name="folder_order_size_name_count">Size \u2192 Name \u2192 Item Count</string>
+    <string name="folder_order_size_count_name">Size \u2192 Item Count \u2192 Name</string>
+
+    <string name="storage_info_format">%1$s: %2$s used / %3$s (%4$s free)</string>
+    <string name="storage_info_accessible">%1$s, %2$s used of %3$s, %4$s free, %5$d percent used</string>
+
+    <!-- Edit Submenu Strings -->
+    <string name="action_edit">Edit</string>
+    <string name="action_convert">Convert</string>
+    <string name="action_convert_to_audio">Convert to Audio</string>
+    <string name="action_favorite">Favorite</string>
+    <string name="action_split">Split</string>
+    <string name="title_edit">Edit: %1$s</string>
+    <string name="title_convert">Convert: %1$s</string>
+    <string name="title_convert_video_to_audio">Convert Video to Audio: %1$s</string>
+    <string name="title_split">Split: %1$s</string>
+    <string name="label_output_format">Output Format</string>
+    <string name="label_audio_bitrate">Bitrate</string>
+    <string name="label_sample_rate">Sampling Rate</string>
+    <string name="label_channels">Channels</string>
+    <string name="channel_stereo">Stereo</string>
+    <string name="channel_mono">Mono</string>
+    <string name="label_image_format">Image Format</string>
+    <string name="label_split_method">Split Method</string>
+    <string name="split_by_duration">Split by Duration</string>
+    <string name="split_by_size">Split by File Size</string>
+    <string name="split_into_equal_parts">Split into Equal Parts</string>
+    <string name="label_split_duration">Duration per part (seconds)</string>
+    <string name="label_split_size">Size per part (MB)</string>
+    <string name="label_num_parts">Number of parts</string>
+    <string name="btn_convert">Convert</string>
+    <string name="btn_split">Split</string>
+    <string name="converting_file">Converting %1$s...</string>
+    <string name="conversion_success">Successfully converted to %1$s</string>
+    <string name="conversion_failed">Conversion failed: %1$s</string>
+    <string name="splitting_file">Splitting %1$s...</string>
+    <string name="split_success">Successfully split into %1$d files</string>
+    <string name="split_failed">Splitting failed: %1$s</string>
+    <string name="edit_submenu_desc">Edit options: Convert, Split, and Trim</string>
+
+    <!-- Trim Strings -->
+    <string name="action_trim">Trim</string>
+    <string name="title_trim">Trim: %1$s</string>
+    <string name="label_start_time">Start Time</string>
+    <string name="label_end_time">End Time</string>
+    <string name="label_hours">Hours</string>
+    <string name="label_minutes">Minutes</string>
+    <string name="label_seconds">Seconds</string>
+    <string name="label_millis">Milliseconds</string>
+    <string name="desc_start_hours">Start time hours</string>
+    <string name="desc_start_minutes">Start time minutes</string>
+    <string name="desc_start_seconds">Start time seconds</string>
+    <string name="desc_start_millis">Start time milliseconds</string>
+    <string name="desc_end_hours">End time hours</string>
+    <string name="desc_end_minutes">End time minutes</string>
+    <string name="desc_end_seconds">End time seconds</string>
+    <string name="desc_end_millis">End time milliseconds</string>
+    <string name="btn_increase_time">Increase time</string>
+    <string name="btn_decrease_time">Decrease time</string>
+    <string name="desc_increase_time">Increase time by %1$s</string>
+    <string name="desc_decrease_time">Decrease time by %1$s</string>
+    <string name="btn_trim">Trim</string>
+    <string name="trimming_file">Trimming %1$s...</string>
+    <string name="trim_success">Successfully trimmed to %1$s</string>
+    <string name="trim_failed">Trimming failed: %1$s</string>
+
+    <!-- Save Dialog Strings -->
+    <string name="dialog_save_title">Save File</string>
+    <string name="label_save_filename">File Name</string>
+    <string name="label_save_location">Location</string>
+    <string name="btn_change_location">Change Location</string>
+    <string name="btn_save_ok">Save</string>
+    <string name="dialog_processing_title">Processing</string>
+    <string name="dialog_processing_message">Please wait while the file is being processed...</string>
+    <string name="step_picker_title">Select Step Interval</string>
+    <string name="step_set_message">Step set to %1$s</string>
+    <string name="select_folder_title">Select Destination Folder</string>
+    <string name="btn_play_start">Play Start</string>
+    <string name="btn_play_end">Play End</string>
+    <string name="btn_stop">Stop</string>
+    <string name="desc_play_start">Play preview from start mark</string>
+    <string name="desc_play_end">Play preview near end mark</string>
+    <string name="desc_stop_playback">Stop preview playback</string>
+    <string name="btn_play_start_fmt">Play Start (%1$s)</string>
+    <string name="btn_play_end_fmt">Play End (%1$s)</string>
+    <string name="desc_play_start_fmt">Play preview from start mark, duration %1$s</string>
+    <string name="desc_play_end_fmt">Play preview near end mark, duration %1$s</string>
+    <string name="preview_duration_picker_title">Select Preview Duration</string>
+    <string name="preview_duration_set_message">Preview duration set to %1$s</string>
+    <string name="btn_delete_marked">Delete Marked</string>
+    <string name="desc_delete_marked">Delete the marked portion and keep the rest</string>
+    <string name="deleting_file">Deleting marked portion from %1$s…</string>
+    <string name="delete_marked_success">Marked portion removed successfully: %1$s</string>
+    <string name="delete_marked_failed">Deleting marked portion failed: %1$s</string>
+    <string name="dialog_completed_title">Completed</string>
+    <string name="btn_play">Play</string>
+    <string name="btn_share">Share</string>
+    <string name="btn_create_new_folder">New Folder</string>
+    <string name="title_media_player">Media Player</string>
+    <string name="title_image_viewer">Image Viewer</string>
+    <string name="btn_previous_track">Previous</string>
+    <string name="btn_next_track">Next</string>
+    <string name="btn_rewind_10s">Rewind 10 seconds</string>
+    <string name="btn_forward_10s">Fast forward 10 seconds</string>
+    <string name="btn_pause">Pause</string>
+    <string name="media_playing">Playing: %1$s</string>
+    <string name="media_paused">Paused</string>
+    <string name="media_position_format">%1$s of %2$s</string>
+    <string name="image_position_format">%1$d of %2$d</string>
+    <string name="btn_rotate">Rotate</string>
+    <string name="cannot_play_media">Cannot play this media file: %1$s</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_apply">Apply</string>
+    <string name="sort_apply_this_folder_only">Apply to this folder only</string>
+    <string name="sort_apply_this_folder_only_hint">Uncheck to apply to all folders</string>
+    <string name="sort_apply_this_category_only">Apply to this category only</string>
+    <string name="sort_apply_this_category_only_hint">Uncheck to apply to all categories and folders</string>
+    <string name="sort_apply_to_favorites_only">Apply to favorites only</string>
+    <string name="sort_apply_to_favorites_only_hint">Uncheck to apply to all folders</string>
+    <string name="sorted_globally_announcement">Sorted all folders by %1$s</string>
+    <string name="sorted_folder_announcement">Sorted this folder by %1$s</string>
+    <string name="sorted_category_announcement">Sorted this category by %1$s</string>
+    <string name="sorted_favorites_announcement">Sorted favorites by %1$s</string>
+    <string name="label_selection_preview">Preview Selection</string>
+    <string name="btn_play_selection">Play</string>
+    <string name="desc_play_selection">Play marked portion</string>
+    <string name="desc_stop_selection">Stop marked portion playback</string>
+    <string name="btn_rewind_fmt">Rewind %1$s</string>
+    <string name="btn_forward_fmt">Forward %1$s</string>
+    <string name="desc_preview_rewind">Rewind %1$s. Swipe up or down to change seek interval.</string>
+    <string name="desc_preview_forward">Fast forward %1$s. Swipe up or down to change seek interval.</string>
+    <string name="seek_time_set_message">Seek time set to %1$s</string>
+    <string name="seek_time_picker_title">Select Seek Time</string>
+    <string name="media_playing_selection">Playing marked selection</string>
+    <string name="selection_playback_completed">Selection playback completed</string>
+    <string name="reached_selection_end">Reached end of selection</string>
+    <string name="reached_selection_start">Reached start of selection</string>
+    <string name="btn_refresh">Refresh</string>
+    <string name="btn_refresh_desc">Refresh current folder</string>
+    <string name="msg_refreshing">Refreshing files…</string>
+    <string name="msg_refreshed">Files refreshed</string>
+    <string name="auto_original">Auto (Same as source)</string>
+    <string name="action_batch_convert">Batch Conversion</string>
+    <string name="batch_convert_title">Batch Conversion: %1$s</string>
+    <string name="batch_convert_summary">%1$d media files found in %2$s</string>
+    <string name="batch_convert_subfolder_option">Save in new subfolder (Converted_Files)</string>
+    <string name="batch_convert_no_files">No audio or video files found in %1$s</string>
+    <string name="batch_convert_progress_title">Batch Converting (%1$d/%2$d)</string>
+    <string name="batch_convert_file_msg">Converting %1$s (%2$d%%)</string>
+    <string name="batch_convert_completed">Batch conversion completed: %1$d files converted successfully</string>
+    <string name="batch_convert_stopped">Batch conversion stopped: %1$d files converted</string>
+
+    <!-- In-App Updates -->
+    <string name="menu_check_updates">Check for Updates</string>
+    <string name="settings_section_updates">App Updates</string>
+    <string name="settings_check_updates">Check for Updates</string>
+    <string name="settings_check_updates_desc">Check GitHub for latest release</string>
+    <string name="settings_auto_check_updates">Auto-Check Updates</string>
+    <string name="settings_auto_check_updates_desc">Automatically check for new releases on startup</string>
+</resources>

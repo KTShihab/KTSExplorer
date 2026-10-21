@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Summary -->
+        <TextView
+            android:id="@+id/tv_batch_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="15sp"
+            android:layout_marginBottom="16dp"
+            tools:text="Found 12 media files in Recordings" />
+
+        <!-- Output Format -->
+        <TextView
+            android:id="@+id/tv_label_format"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_output_format"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spinner_format"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:contentDescription="@string/label_output_format"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Bitrate -->
+        <TextView
+            android:id="@+id/tv_label_bitrate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_audio_bitrate"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spinner_bitrate"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:contentDescription="@string/label_audio_bitrate"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Sampling Rate -->
+        <TextView
+            android:id="@+id/tv_label_sample_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_sample_rate"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spinner_sample_rate"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:contentDescription="@string/label_sample_rate"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Channels -->
+        <TextView
+            android:id="@+id/tv_label_channels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_channels"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spinner_channels"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:contentDescription="@string/label_channels"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Save in Subfolder CheckBox -->
+        <CheckBox
+            android:id="@+id/cb_save_subfolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/batch_convert_subfolder_option"
+            android:checked="true"
+            android:minHeight="48dp"
+            android:textSize="14sp"
+            android:textColor="?android:attr/textColorPrimary" />
+
+    </LinearLayout>
+
+</ScrollView>

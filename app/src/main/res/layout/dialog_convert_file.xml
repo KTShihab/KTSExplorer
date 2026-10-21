@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Format Label and Spinner -->
+        <TextView
+            android:id="@+id/tv_label_format"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_output_format"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spinner_format"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:contentDescription="@string/label_output_format"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Audio Options Container -->
+        <LinearLayout
+            android:id="@+id/container_audio_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Bitrate -->
+            <TextView
+                android:id="@+id/tv_label_bitrate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_audio_bitrate"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <Spinner
+                android:id="@+id/spinner_bitrate"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:contentDescription="@string/label_audio_bitrate"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Sampling Rate -->
+            <TextView
+                android:id="@+id/tv_label_sample_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_sample_rate"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <Spinner
+                android:id="@+id/spinner_sample_rate"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:contentDescription="@string/label_sample_rate"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Channels -->
+            <TextView
+                android:id="@+id/tv_label_channels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_channels"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <Spinner
+                android:id="@+id/spinner_channels"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:contentDescription="@string/label_channels"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+
+        <!-- Progress Indicator -->
+        <ProgressBar
+            android:id="@+id/progress_convert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+    </LinearLayout>
+
+</ScrollView>

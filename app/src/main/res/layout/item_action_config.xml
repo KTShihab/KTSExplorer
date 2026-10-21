@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="64dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="16dp"
+    android:paddingEnd="12dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/tv_action_position"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:gravity="center"
+        android:background="@drawable/ic_launcher_background"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:importantForAccessibility="no"
+        tools:text="1" />
+
+    <ImageView
+        android:id="@+id/img_action_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="12dp"
+        android:importantForAccessibility="no"
+        app:tint="?attr/colorPrimary"
+        tools:src="@drawable/ic_action_copy" />
+
+    <TextView
+        android:id="@+id/tv_action_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_weight="1"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:importantForAccessibility="no"
+        tools:text="Copy" />
+
+    <!-- Move Up Button (48dp Touch Target) -->
+    <ImageButton
+        android:id="@+id/btn_move_up"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Move up"
+        android:src="@drawable/ic_arrow_up"
+        app:tint="?attr/colorPrimary" />
+
+    <!-- Move Down Button (48dp Touch Target) -->
+    <ImageButton
+        android:id="@+id/btn_move_down"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Move down"
+        android:src="@drawable/ic_arrow_down"
+        app:tint="?attr/colorPrimary" />
+
+    <!-- Toggle Action Switch -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_action_enabled"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:textOn=""
+        android:textOff=""
+        app:showText="false" />
+
+</LinearLayout>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Name Property Row -->
+        <LinearLayout
+            android:id="@+id/row_prop_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/prop_name"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorSecondary"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:id="@+id/tv_prop_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textIsSelectable="true"
+                android:importantForAccessibility="no"
+                tools:text="sample_document.pdf" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:importantForAccessibility="no" />
+
+        <!-- Type Property Row -->
+        <LinearLayout
+            android:id="@+id/row_prop_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/prop_type"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorSecondary"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:id="@+id/tv_prop_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:importantForAccessibility="no"
+                tools:text="PDF document (.pdf)" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:importantForAccessibility="no" />
+
+        <!-- Location / Path Property Row -->
+        <LinearLayout
+            android:id="@+id/row_prop_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/prop_location"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorSecondary"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:id="@+id/tv_prop_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textIsSelectable="true"
+                android:importantForAccessibility="no"
+                tools:text="/storage/emulated/0/Download" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:importantForAccessibility="no" />
+
+        <!-- Size Property Row -->
+        <LinearLayout
+            android:id="@+id/row_prop_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/prop_size"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorSecondary"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:id="@+id/tv_prop_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:importantForAccessibility="no"
+                tools:text="4.2 MB (4,404,019 bytes)" />
+
+        </LinearLayout>
+
+        <!-- Contains Property Row (Folders Only) -->
+        <LinearLayout
+            android:id="@+id/row_prop_contains"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:visibility="gone"
+            android:focusable="true"
+            tools:visibility="visible">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="8dp"
+                android:background="?android:attr/listDivider"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/prop_contains"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorSecondary"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:id="@+id/tv_prop_contains"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:importantForAccessibility="no"
+                tools:text="24 files, 5 folders" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:importantForAccessibility="no" />
+
+        <!-- Last Modified Property Row -->
+        <LinearLayout
+            android:id="@+id/row_prop_modified"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/prop_modified"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorSecondary"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:id="@+id/tv_prop_modified"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:importantForAccessibility="no"
+                tools:text="Oct 12, 2026, 09:30:15 PM" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:importantForAccessibility="no" />
+
+        <!-- Permissions Property Row -->
+        <LinearLayout
+            android:id="@+id/row_prop_permissions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/prop_permissions"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorSecondary"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:id="@+id/tv_prop_permissions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:importantForAccessibility="no"
+                tools:text="Read: Yes, Write: Yes, Hidden: No" />
+
+        </LinearLayout>
+
+        <!-- Dynamic Container for Media & Document Metadata Rows -->
+        <LinearLayout
+            android:id="@+id/container_extra_properties"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+</ScrollView>

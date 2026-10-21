@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="accessibility_action_select" type="id" />
+    <item name="accessibility_action_favorite" type="id" />
+    <item name="accessibility_action_open_with" type="id" />
+    <item name="accessibility_action_copy" type="id" />
+    <item name="accessibility_action_cut" type="id" />
+    <item name="accessibility_action_rename" type="id" />
+    <item name="accessibility_action_share" type="id" />
+    <item name="accessibility_action_delete" type="id" />
+    <item name="accessibility_action_properties" type="id" />
+    <item name="accessibility_action_edit" type="id" />
+    <item name="accessibility_action_batch_convert" type="id" />
+
+    <!-- Step Interval Action IDs for Trim Increase/Decrease -->
+    <item name="action_step_100ms" type="id" />
+    <item name="action_step_200ms" type="id" />
+    <item name="action_step_500ms" type="id" />
+    <item name="action_step_1s" type="id" />
+    <item name="action_step_5s" type="id" />
+    <item name="action_step_10s" type="id" />
+    <item name="action_step_30s" type="id" />
+    <item name="action_step_1m" type="id" />
+    <item name="action_step_5m" type="id" />
+    <item name="action_step_10m" type="id" />
+
+    <!-- Preview Duration Action IDs for Play Buttons -->
+    <item name="action_preview_5s" type="id" />
+    <item name="action_preview_10s" type="id" />
+    <item name="action_preview_15s" type="id" />
+    <item name="action_preview_20s" type="id" />
+    <item name="action_preview_30s" type="id" />
+    <item name="action_preview_1m" type="id" />
+
+    <!-- Seek Step Action IDs for Fast-Forward and Rewind in Selection Preview -->
+    <item name="action_seek_5s" type="id" />
+    <item name="action_seek_10s" type="id" />
+    <item name="action_seek_15s" type="id" />
+    <item name="action_seek_20s" type="id" />
+    <item name="action_seek_30s" type="id" />
+    <item name="action_seek_1m" type="id" />
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- File Name Label -->
+    <TextView
+        android:id="@+id/tv_label_filename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_save_filename"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/et_save_filename"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/label_save_filename"
+        android:contentDescription="@string/label_save_filename"
+        android:singleLine="true"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Location Label -->
+    <TextView
+        android:id="@+id/tv_label_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_save_location"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tv_save_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="13sp"
+        android:ellipsize="middle"
+        android:singleLine="true"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btn_change_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_change_location"
+        android:textSize="13sp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+</LinearLayout>
