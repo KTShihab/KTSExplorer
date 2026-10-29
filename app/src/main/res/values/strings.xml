@@ -551,4 +551,32 @@
     <string name="settings_check_updates_desc">Check GitHub for latest release</string>
     <string name="settings_auto_check_updates">Auto-Check Updates</string>
     <string name="settings_auto_check_updates_desc">Automatically check for new releases on startup</string>
+
+    <!-- Batch Rename Strings -->
+    <string name="action_batch_rename">Batch Rename</string>
+    <string name="btn_rename_selected">Rename Selected Items</string>
+    <string name="dialog_batch_rename_title">Batch Rename</string>
+    <string name="dialog_batch_rename_count">%1$d files selected</string>
+    <string name="rename_mode_beginning">Beginning (Add Prefix)</string>
+    <string name="rename_mode_end">End (Add Suffix)</string>
+    <string name="rename_mode_center">Center / Text (Find &amp; Replace)</string>
+    <string name="rename_mode_pattern">New Name (Sequential Numbering)</string>
+    <string name="hint_prefix_text">Prefix text (e.g. Travel_)</string>
+    <string name="hint_suffix_text">Suffix text (e.g. _final)</string>
+    <string name="hint_find_text">Text to find</string>
+    <string name="hint_replace_text">Replace with (leave empty to delete)</string>
+    <string name="hint_base_name">Base name (e.g. Vacation)</string>
+    <string name="hint_start_number">Start at</string>
+    <string name="label_include_numbering">Include sequential numbering</string>
+    <string name="label_case_sensitive">Case sensitive matching</string>
+    <string name="label_keep_extension">Keep original file extension</string>
+    <string name="label_rename_preview">Preview:</string>
+    <string name="label_numbering_digits">Number format</string>
+    <string name="label_separator">Separator</string>
+    <string name="btn_execute_rename">Rename %1$d Files</string>
+    <string name="toast_batch_rename_success">%1$d files renamed successfully</string>
+    <string name="toast_batch_rename_failed">%1$d of %2$d files could not be renamed</string>
+    <string name="toast_no_changes_specified">Please enter text or pattern to rename</string>
+    <string name="toast_find_text_empty">Please enter the text to find</string>
+    <string name="toast_base_name_empty">Please enter a base name</string>
 </resources>

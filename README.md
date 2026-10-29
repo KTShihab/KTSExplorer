@@ -15,6 +15,13 @@
 - **Favorites & Quick Bookmarks:** Pin frequently used directories to a dedicated Favorites tab for single-tap access.
 - **Powerful Search & Sorting:** Real-time search across directories and categories. Sort by Name, Date, Size, or File Type globally or per-folder.
 - **Full File Operations:** Cut, Copy, Paste, Rename, Delete, Share, Open With, and Detailed File Properties with instant accessibility announcements.
+- **Batch Renaming with Multi-Position Support:** Rename multiple files simultaneously with powerful position controls:
+  - **Beginning (Prefix):** Prepend custom text and optional sequential numbers to the start of filenames.
+  - **End (Suffix):** Append text and optional numbering right before the file extension.
+  - **Center / Text (Find & Replace):** Search for text within filenames and replace or remove it.
+  - **New Name (Sequential Pattern):** Complete rename with custom base name, starting index, digit format (`01`, `001`), and customizable separators (`_`, `-`, space).
+  - **Live Preview:** Real-time preview of changes before executing the rename.
+  - **Extension Protection:** Keep original file extensions safely intact.
 
 ### 🎙️ Audio Tools & Batch Media Conversion
 - **Native MP3 Encoding DSP Engine:** Embedded high-speed C audio engine for fast, high-quality audio compression.

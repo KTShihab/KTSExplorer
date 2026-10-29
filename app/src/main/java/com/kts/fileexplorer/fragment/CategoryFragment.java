@@ -38,6 +38,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.tabs.TabLayout;
 import com.kts.fileexplorer.R;
+import com.kts.fileexplorer.util.BatchRenameHelper;
+import android.widget.FrameLayout;
 import com.kts.fileexplorer.adapter.CategoryAdapter;
 import com.kts.fileexplorer.adapter.FileAdapter;
 import com.kts.fileexplorer.adapter.InstalledAppAdapter;
@@ -131,6 +133,7 @@ public class CategoryFragment extends Fragment implements CategoryAdapter.OnCate
     private View btnCategoryShareSelection;
     private View btnCategoryCutSelection;
     private View btnCategoryCopySelection;
+    private View btnCategoryRenameSelection;
     private View btnCategoryDeleteSelection;
     private View btnCategoryFavoriteSelection;
 
@@ -255,6 +258,7 @@ public class CategoryFragment extends Fragment implements CategoryAdapter.OnCate
         btnCategoryShareSelection = view.findViewById(R.id.btn_category_share_selection);
         btnCategoryCutSelection = view.findViewById(R.id.btn_category_cut_selection);
         btnCategoryCopySelection = view.findViewById(R.id.btn_category_copy_selection);
+        btnCategoryRenameSelection = view.findViewById(R.id.btn_category_rename_selection);
         btnCategoryDeleteSelection = view.findViewById(R.id.btn_category_delete_selection);
         btnCategoryFavoriteSelection = view.findViewById(R.id.btn_category_favorite_selection);
 
@@ -312,6 +316,9 @@ public class CategoryFragment extends Fragment implements CategoryAdapter.OnCate
         }
         if (btnCategoryCopySelection != null) {
             btnCategoryCopySelection.setOnClickListener(v -> copySelectedItems());
+        }
+        if (btnCategoryRenameSelection != null) {
+            btnCategoryRenameSelection.setOnClickListener(v -> renameSelectedItems());
         }
         if (btnCategoryDeleteSelection != null) {
             btnCategoryDeleteSelection.setOnClickListener(v -> deleteSelectedItems());
@@ -2117,7 +2124,88 @@ public class CategoryFragment extends Fragment implements CategoryAdapter.OnCate
 
     @Override
     public void onActionRename(FileItem item) {
-        Toast.makeText(requireContext(), "Use Home tab to rename items", Toast.LENGTH_SHORT).show();
+        showRenameDialog(item);
+    }
+
+    private void showRenameDialog(FileItem item) {
+        EditText input = new EditText(requireContext());
+        input.setSingleLine(true);
+        input.setText(item.getName());
+        input.setHint(R.string.dialog_rename_hint);
+        int dot = item.getName().lastIndexOf('.');
+        input.setSelection(0, dot > 0 ? dot : item.getName().length());
+
+        FrameLayout container = new FrameLayout(requireContext());
+        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+        );
+        params.leftMargin = 60;
+        params.rightMargin = 60;
+        input.setLayoutParams(params);
+        container.addView(input);
+
+        new MaterialAlertDialogBuilder(requireContext())
+                .setTitle(getString(R.string.dialog_rename_title) + " " + item.getName())
+                .setView(container)
+                .setPositiveButton(R.string.btn_rename, (d, which) -> {
+                    String newName = input.getText().toString().trim();
+                    if (TextUtils.isEmpty(newName)) {
+                        Toast.makeText(requireContext(), R.string.toast_name_empty, Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    if (newName.equals(item.getName())) {
+                        return;
+                    }
+                    File originalFile = item.getFile();
+                    File destinationFile = new File(originalFile.getParentFile(), newName);
+                    if (originalFile.renameTo(destinationFile)) {
+                        String successMsg = getString(R.string.toast_rename_success, newName);
+                        Toast.makeText(requireContext(), successMsg, Toast.LENGTH_SHORT).show();
+                        recyclerCategoryFiles.announceForAccessibility(successMsg);
+                        refreshCurrentCategory();
+                    } else {
+                        String failMsg = getString(R.string.toast_rename_failed, item.getName());
+                        Toast.makeText(requireContext(), failMsg, Toast.LENGTH_SHORT).show();
+                        recyclerCategoryFiles.announceForAccessibility(failMsg);
+                    }
+                })
+                .setNegativeButton(R.string.btn_cancel, null)
+                .show();
+    }
+
+    private void refreshCurrentCategory() {
+        if (activeCategoryFolder != null) {
+            refreshFolderFilesFromDisk(activeCategoryFolder);
+        } else if (activeCategoryType != null) {
+            categoryFolderCache.remove(activeCategoryType);
+            if (activeCategoryType == CategoryItem.Type.NEW_FILES) {
+                scanNewFilesContent();
+            } else {
+                scanCategoryContent(activeCategoryType);
+            }
+        }
+    }
+
+    private void renameSelectedItems() {
+        List<FileItem> selected = fileAdapter.getSelectedItems();
+        if (selected.isEmpty()) return;
+
+        if (selected.size() == 1) {
+            showRenameDialog(selected.get(0));
+            exitSelectionMode();
+        } else {
+            List<File> files = new ArrayList<>();
+            for (FileItem item : selected) {
+                files.add(item.getFile());
+            }
+            BatchRenameHelper.showDialog(requireActivity(), files, (successCount, failedCount) -> {
+                exitSelectionMode();
+                refreshCurrentCategory();
+                String announcement = getString(R.string.toast_batch_rename_success, successCount);
+                recyclerCategoryFiles.announceForAccessibility(announcement);
+            });
+        }
     }
 
     @Override

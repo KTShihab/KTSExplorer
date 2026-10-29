@@ -456,6 +456,35 @@
                 android:importantForAccessibility="no" />
         </LinearLayout>
 
+        <!-- Rename Action -->
+        <LinearLayout
+            android:id="@+id/btn_rename_selection"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/btn_rename_selected">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_action_rename"
+                app:tint="?attr/colorPrimary"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_rename"
+                android:textSize="11sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:importantForAccessibility="no" />
+        </LinearLayout>
+
         <!-- Delete Action -->
         <LinearLayout
             android:id="@+id/btn_delete_selection"

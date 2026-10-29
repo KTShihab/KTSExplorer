@@ -44,6 +44,7 @@ import java.nio.charset.StandardCharsets;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.kts.fileexplorer.util.StorageHelper;
+import com.kts.fileexplorer.util.BatchRenameHelper;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -132,6 +133,7 @@ public class HomeFragment extends Fragment implements FileAdapter.OnFileItemActi
     private ImageButton btnSelectAll;
     private View btnFavoriteSelection;
     private View btnCopySelection;
+    private View btnRenameSelection;
     private View btnCutSelection;
     private View btnShareSelection;
     private View btnDeleteSelection;
@@ -325,6 +327,7 @@ public class HomeFragment extends Fragment implements FileAdapter.OnFileItemActi
         btnSelectAll = view.findViewById(R.id.btn_select_all);
         btnFavoriteSelection = view.findViewById(R.id.btn_favorite_selection);
         btnCopySelection = view.findViewById(R.id.btn_copy_selection);
+        btnRenameSelection = view.findViewById(R.id.btn_rename_selection);
         btnCutSelection = view.findViewById(R.id.btn_cut_selection);
         btnShareSelection = view.findViewById(R.id.btn_share_selection);
         btnDeleteSelection = view.findViewById(R.id.btn_delete_selection);
@@ -393,6 +396,9 @@ public class HomeFragment extends Fragment implements FileAdapter.OnFileItemActi
         });
         btnFavoriteSelection.setOnClickListener(v -> favoriteSelectedItems());
         btnCopySelection.setOnClickListener(v -> copySelectedItems());
+        if (btnRenameSelection != null) {
+            btnRenameSelection.setOnClickListener(v -> renameSelectedItems());
+        }
         btnCutSelection.setOnClickListener(v -> cutSelectedItems());
         btnShareSelection.setOnClickListener(v -> shareSelectedItems());
         btnDeleteSelection.setOnClickListener(v -> deleteSelectedItems());
@@ -651,6 +657,29 @@ public class HomeFragment extends Fragment implements FileAdapter.OnFileItemActi
         }
         Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show();
         recyclerView.announceForAccessibility(msg);
+    }
+
+    private void renameSelectedItems() {
+        List<FileItem> selected = fileAdapter.getSelectedItems();
+        if (selected.isEmpty()) return;
+
+        if (selected.size() == 1) {
+            showRenameDialog(selected.get(0));
+            exitSelectionMode();
+        } else {
+            List<File> files = new ArrayList<>();
+            for (FileItem item : selected) {
+                files.add(item.getFile());
+            }
+            BatchRenameHelper.showDialog(requireActivity(), files, (successCount, failedCount) -> {
+                exitSelectionMode();
+                if (currentDirectory != null) {
+                    loadDirectory(currentDirectory);
+                }
+                String announcement = getString(R.string.toast_batch_rename_success, successCount);
+                recyclerView.announceForAccessibility(announcement);
+            });
+        }
     }
 
     private void cutSelectedItems() {
